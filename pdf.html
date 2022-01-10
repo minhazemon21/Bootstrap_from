@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>From</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="pdf.css" />
+    <script src="pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+  </head>
+
+
+  <body>
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card" id="invoice">
+            
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="mb-6 pull-left" style="padding-left: 17px;">
+                    <label for="type_of_financing">Type of Financing:</label>
+                    <input type="text" id="type_of_financing" name="type_of_financing" class="no-outline newwww"/><br />
+                    <label for="number_of_installments">Number of Installments:</label>
+                    <input type="text" id="number_of_installments" name="number_of_installments"  class="no-outline newwww"/><br />
+                    <label for="periodicity_of_payment" >Periodicity of Payment:</label >
+                    <input type="text" id="periodicity_of_payment" name="periodicity_of_payment" placeholder="Monthly"  class="no-outline newwww" /><br />
+                    <label for="amount_of_loan_applied_for" >Amount of Loan Applied for:</label >
+                    <input type="text" id="amount_of_loan_applied_for" name="amount_of_loan_applied_for" placeholder="BDT 0"  class="no-outline newwww" /> <br />
+                    <label for="sector_type">Sector Type:</label>
+                    <input type="text" id="sector_type" name="sector_type" placeholder="Private"  class="no-outline newwww" /><br />
+                    <label for="sector_code">Sector Code (6 Digit):</label>
+                    <input type="text" id="sector_code" name="sector_code"   class="no-outline newwww"/><br />
+                    <label for="branch_name">Branch Name:</label>
+                    <input type="text" id="branch_name" name="branch_name"  class="no-outline newwww"/>
+
+
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-6">
+                    <div class="text-sm-left">
+                     
+                      <label for="cib_subject_code">CIB Subject Code</label>
+                      <input type="text" id="cib_subject_code" name="cib_subject_code"  class="no-outline newwww" /><br />
+                      <label for="fi_subject_code" >FI Subject Code:<span style="font-size: 9px" >(Cust. ID)</span ></label >
+                      <input type="text" id="fi_subject_code" name="fi_subject_code"  class="no-outline newwww" /><br />
+                      <p>(If Borrower is Other than New)</p><br/>
+                      <label for="date">Date</label>
+                    <input type="date" id="date" name="date"  class="no-outline newwww"/><br />
+                    <label for="ref_no">Ref. No.</label>
+                    <input type="text" id="ref_no" name="ref_no"  class="no-outline newwww"/> <br />
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            <div class="secondpart">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                  <div class="mb-4 mb-md-2 text-left">
+                    <p
+                      style="
+                        text-align: center;
+                        font-size: 10px;
+                        font-weight: 700;
+                      "
+                    >
+                      UNDERTAKING
+                      
+                    </p>
+                    
+                  </div>
+                  <div class="mb-4 mb-md-2 text-right" style="margin-top: -2rem;">
+                    <p style="text-align: right; font-weight: 700; font-size: 9px;">
+                      (Attachment - Ka)
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <p style="margin-bottom:auto !important">
+                    To<br />
+                    The Manager<br>
+                    <input type="text" class="no-outline" id="address_M" style="width: 30%;" placeholder=""><br>
+                    <p>Subject: Submission of ownership information of borrowing Individual/Institution</p>
+                    <p>Dear Sir/Madam,</p>
+                    <p>I, <input type="text" class="no-outline" id="name_of" style="width: 33%;" placeholder="                  Name"/> proprietor/patner/shareholder/member of Trustee/Body/Director/Managing  Director/ Chairman
+                      <br> of <input type="text" class="no-outline" id="name_of_company" style="width: 33%;" placeholder="                 Name of Company"/>   am applying for sanctioning/renewal/rescheduling of a loan in my own name/ aforementioned company's name.
+                      
+                    </p> 
+                  <label for="f_name">Father Name:</label>
+                  <input type="text" id="f_name"class="no-outline newwww" name="f_name" ><br>
+                  <label for="m_name">Mother Name:</label>
+                  <input type="text" id="m_name"class="no-outline newwww" name="m_name" ><br>
+                  <label for="hs_name">Husband's/Spouse Name <span style="font-style: 12px;">(if applicable):</span></label>
+                  <input type="text" id="hs_name"class="no-outline newwww" style="width:25%" name="hs_name" ><br>
+                  <label for="p_address">Permanent Address:</label>
+                  <input type="text" id="p_address"class="no-outline newwww" name="p_address" style="width:52%" ><br>
+                  <label for="bp_address">Buisness <br>Present Address:</label>
+                  <input type="text" id="bp_address"class="no-outline newwww" name="bp_address" style="width:52%"><br>
+                  <label for="nid">National ID Number:</label>
+                  <input type="number" id="nid"class="no-outline newwww" name="nid" ><br>
+                  <label for="oid">Other ID Numbers(Passport/Driving license/Nationality Certificate):</label>
+                  <input type="text" id="oid"class="no-outline newwww" name="oid" ><br>
+                  <label for="id">ID Number:</label>
+                  <input type="text" id="id"class="no-outline newwww" name="id" >
+                  <label for="id_issue">ID Issue Date:</label>
+                  <input type="date" id="id_issue"class="no-outline newwww" name="id_issue" >
+                  <label for="id_issue_coun">ID Issue Country:</label>
+                  <input type="text" id="id_issue_coun"class="no-outline newwww" name="id_issue_coun" ><br>
+                  
+                  <label for="dob">Date of Birth:</label>
+                  <input type="date" id="dob"class="no-outline newwww" name="dob" ><br>
+                  <label for="dis_birth">District of Birth:</label>
+                  <input type="text" id="dis_birth"class="no-outline newwww" name="dis_birth" >
+                  <label for="country_birth">Country of Birth:</label><span id="country_birth" style=""> Bangladesh</span>
+                  <label for="tin">TIN:</label>
+                  <input type="text" id="tin"class="no-outline newwww" name="tin" >
+                  <label for="gender"> Gender:</label>
+                  <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">other</option>
+                  </select><br>
+                  <label for="tel_number">Telephone Number:</label>
+                  <input type="tel" id="tel_number"class="no-outline newwww" name="tel_number" >
+                  <span>are given for your kind consideration. The list of companies under the ownership of mine along with their bank liability status is given in the following table:</span>
+                  <br>
+                  <br>
+                 
+                  
+  
+                  <table>
+                    <tr>
+                      
+                      <th rowspan="3" class="tbl">Sl. No.</th>
+                      <th rowspan="3" class="tbl">Name of Company</th>
+                      <th rowspan="3" class="tbl">Main Address</th>
+                      <th rowspan="3" class="tbl">Additional Address</th>
+                      <th colspan="3" class="tbl">Whether the company is availing any loan or not?</th>
+  
+                      
+                      
+                    </tr>
+                    <tr >
+                      <td colspan="2" class="tbl">Yes</td>
+                      
+                      <td rowspan="2" class="tbl">No</td>
+                      
+                      </tr>
+                      <tr >
+                        <td colspan="1" class="tbl">Name of Bank/FI</td>
+                        <td colspan="1" class="tbl">Branch</td>
+                        
+                        
+                        </tr>
+  
+                        
+                      <tr>
+  
+                        <td><input type="text" id="serial_no" class="no-outline tableinput"/> </td>
+                        <td> <input type="text" id="table_company_name" class="no-outline tableinput"/> </td>
+                        <td> <input type="text" id="table_main_address" class="no-outline tableinput"/></td>
+                        <td> <input type="text" id="table_add_address" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_name_bank_fi" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_branch" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_no" class="no-outline tableinput"/></td>
+                      </tr>
+                      <tr>
+  
+                        <td><input type="text" id="serial_no" class="no-outline tableinput"/> </td>
+                        <td> <input type="text" id="table_company_name" class="no-outline tableinput"/> </td>
+                        <td> <input type="text" id="table_main_address" class="no-outline tableinput"/></td>
+                        <td> <input type="text" id="table_add_address" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_name_bank_fi" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_branch" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_no" class="no-outline tableinput"/></td>
+                      </tr>
+                      <tr>
+  
+                        <td><input type="text" id="serial_no" class="no-outline tableinput"/> </td>
+                        <td> <input type="text" id="table_company_name" class="no-outline tableinput"/> </td>
+                        <td> <input type="text" id="table_main_address" class="no-outline tableinput"/></td>
+                        <td> <input type="text" id="table_add_address" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_name_bank_fi" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_branch" class="no-outline tableinput"/></td>
+                        <td>  <input type="text" id="table_no" class="no-outline tableinput"/></td>
+                      </tr>
+  
+                  </table>
+                  <br>
+  
+  
+                  Apart from the information stated above, if any liability in my own name or my company's name is found, I will be bound to obey any decision made by 
+                  the authority concerned relating to sanctioning/renewal/rescheduling of the loan applied for and I will be punished by law for providing this false 
+                  or fabricated information
+  
+                  </p>
+                </div>
+                <div class="d-md-flex flex-md-wrap" style="height: 3rem;">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="abcd" style="height: 2rem;"></div>
+                    <div class="text">
+                      <p>Seal and Signature of the <br> Bank Official</p>
+  
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="abcd" style="height: 2rem;"></div>
+                    <div class="text" style="text-align: center;">
+                      <p>Seal and Signature of the <br> Loan Applicant</p>
+  
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            
+            
+        
+          </div>
+        </div>
+        <div class="col-md-6 text-left mb-3">
+
+          <button class="btn btn-primary" id="download" style="width: 100%;">Download</button>
+        </div>
+        <div class="col-md-6 text-right mb-3">
+
+            <button class="btn btn-primary" id="upload" style="background-color: #338d2d; width: 100%;">Upload</button>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
