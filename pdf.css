@@ -78,6 +78,23 @@ a {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap
 }
+@media (min-width:300px) and (max-width:800px) {
+    .loan_applicant{
+        margin-top: -5rem;
+        margin-left: 6rem;
+    }
+    .container{
+        width: 173%;
+    }
+    .mobile_size{
+        margin-left: 19rem;
+        margin-top: -11rem;
+    }
+    .mbl_para{
+        margin-top: -29px;
+    }
+    
+}
 
 @media (min-width: 768px) {
     .wmin-md-400 {
